@@ -1,6 +1,6 @@
 {
   "name": "pon-task-open",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pon task to open files",
   "main": "lib",
   "browser": "shim/browser",
