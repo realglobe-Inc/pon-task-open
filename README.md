@@ -75,14 +75,14 @@ Usage
 'use strict'
 
 const pon = require('pon')
-const ponTaskOpen = require('pon-task-open')
+const open = require('pon-task-open')
 
 ;(async () => {
   let run = pon({
-    myTask01: ponTaskOpen()
+    'open:local': open('http://localhost:300', {wait: false})
   })
 
-  run('myTask01')
+  run('open:local')
 }).catch((err) => console.error(err))
 
 ```
@@ -98,12 +98,13 @@ Signatures
 ---------
 
 
-### `define(options) -> function`
+### `define(target, options) -> function`
 
 Define task
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| target | string |  Target to open |
 | options | Object |  Optional settings |
 
 
